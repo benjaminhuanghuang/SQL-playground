@@ -1,0 +1,8 @@
+http://www.ruanyifeng.com/blog/2013/12/getting_started_with_postgresql.html
+
+
+sudo apt-get install postgresql-client
+
+sudo apt-get install postgresql   # server running on port 5432
+
+sudo apt-get install pgadmin3
