@@ -21,3 +21,17 @@ SELECT * FROM TableA FULL OUTER JOIN TableB ON TableA.name = TableB.name
 
 -- Demo1 
 select vote.id, vote.vote_title, vote.ip from vote right join voter on vote.id
+
+
+/*
++----+-------+--------+-----------+
+| Id | Name  | Salary | ManagerId |
++----+-------+--------+-----------+
+| 1  | Joe   | 70000  | 3         | 
+| 3  | Sam   | 60000  | NULL      | 
+*/
+SELECT
+     a.NAME AS Employee
+FROM Employee AS a JOIN Employee AS b
+     ON a.ManagerId = b.Id
+     AND a.Salary > b.Salary
