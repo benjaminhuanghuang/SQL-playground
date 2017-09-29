@@ -15,7 +15,7 @@ select Salary as SecondHighestSalary from Employee order by Salary desc limit 1 
 SELECT IF(COUNT(Salary) >= 1, Salary, NULL) AS SecondHighestSalary FROM
 (SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 , 1) tmp  
 
-
+--  If there is no second highest salary, then the query should return null.
 SELECT  MAX(Salary) as SecondHighestSalary FROM Employee WHERE
 Salary NOT IN (SELECT MAX(Salary) FROM Employee)
 
